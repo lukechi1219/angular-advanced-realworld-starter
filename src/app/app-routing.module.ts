@@ -6,9 +6,9 @@ const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
-    // loadChildren: ()=> import()
+    loadChildren: () => import('./posts/posts.module').then(m => m.PostsModule)
   },
-  { path: 'posts', loadChildren: () => import('./posts/posts.module').then(m => m.PostsModule) },
+  { path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule) },
 ];
 
 @NgModule({
