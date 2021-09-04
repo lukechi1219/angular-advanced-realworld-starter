@@ -8,6 +8,7 @@ const routes: Routes = [
     component: LayoutComponent,
     // loadChildren: ()=> import()
   },
+  { path: 'posts', loadChildren: () => import('./posts/posts.module').then(m => m.PostsModule) },
 ];
 
 @NgModule({
